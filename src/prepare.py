@@ -1,7 +1,6 @@
 from dvc import api
 import pandas as pd
 from io import StringIO
-from sklearn.preprocessing import PowerTransformer
 import sys
 import logging
 
@@ -37,11 +36,6 @@ full_movie_data = pd.merge( opening_data,fin_movie_data, on = 'movie_title', how
 full_movie_data[(full_movie_data.worldwide_gross != 0) & (full_movie_data.worldwide_gross.notnull())].shape
 full_movie_data = full_movie_data.drop(['movie_title','gross'],axis=1)
 
-full_movie_data_scaled = full_movie_data.copy()
-scaler = PowerTransformer(method='box-cox')
-full_movie_data_scaled = scaler.fit_transform(full_movie_data_scaled)
-full_movie_data_scaled = pd.DataFrame(full_movie_data_scaled, columns = full_movie_data.columns)
-
-full_movie_data_scaled.to_csv('dataset/processed_data.csv', index=False)
+full_movie_data.to_csv('dataset/full_data.csv', index=False)
 
 logger.info('Data ready!')

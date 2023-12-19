@@ -3,5 +3,5 @@ venv/
 *.json
 *.csv
 *.pkl
-*.txt
+report.txt
 __pycache__/

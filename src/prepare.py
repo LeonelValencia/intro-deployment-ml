@@ -33,7 +33,6 @@ fin_data = fin_data[['movie_title','production_budget','worldwide_gross']]
 
 fin_movie_data = pd.merge(fin_data, movie_data, on= 'movie_title', how='left')
 full_movie_data = pd.merge( opening_data,fin_movie_data, on = 'movie_title', how='left')
-full_movie_data[(full_movie_data.worldwide_gross != 0) & (full_movie_data.worldwide_gross.notnull())].shape
 full_movie_data = full_movie_data.drop(['movie_title','gross'],axis=1)
 
 full_movie_data.to_csv('dataset/full_data.csv', index=False)

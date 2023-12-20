@@ -1,7 +1,7 @@
 name: Testing API
 on: [push, pull_request]
 permissions:
-  id-token:write# need this for OIDC  
+  id-token:write # need this for OIDC  
   contents:read
 jobs:
   testing-api:

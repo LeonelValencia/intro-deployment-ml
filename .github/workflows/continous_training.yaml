@@ -48,5 +48,5 @@ jobs:
           REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           cat report.txt >> report.md
-          echo "![](./prediction_behavior.png)" >> report.md
+          echo '![image](./prediction_behavior.png "Title")' >> report.md
           cml comment create report.md

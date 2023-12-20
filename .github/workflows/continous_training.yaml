@@ -6,11 +6,11 @@ on:
   schedule:
     - cron: "0 */9 * * *"
   workflow_dispatch:
-  inputs:
-    reason:
-      description: "Reason for running the workflow"
-      required: false
-      default: "running CT"
+    inputs:
+      reason:
+        description: "Reason for running the workflow"
+        required: false
+        default: "running CT"
 jobs:
   continous-training:
     runs-on: ubuntu-latest

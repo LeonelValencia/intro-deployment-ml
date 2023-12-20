@@ -27,7 +27,7 @@ jobs:
           pip install -r src/requirements.txt
           export GOOGLE_APPLICATION_CREDENTIALS=$(python utilities/setter.py)
           dvc pull model/model.pkl -r model-track
-          dvc unprotected model/model.pkl
+          dvc unprotect model/model.pkl
           dvc repro -f
           echo "Model trained"
           dvc add model/model.pkl

@@ -28,7 +28,7 @@ jobs:
       - name: Authenticate with gcloud
         uses: google-github-actions/auth@v1
         with:
-          credentials_json: ${{ env.GOOGLE_APPLICATION_CREDENTIALS }} # $(python utilities/setter.py)
+          credentials_json: $(python utilities/setter.py) # ${{ env.GOOGLE_APPLICATION_CREDENTIALS }}
           project_id: ${{ secrets.PROJECT_ID }}
       - name: Set up GCLOUD SDK
         uses: google-github-actions/setup-gcloud@v1

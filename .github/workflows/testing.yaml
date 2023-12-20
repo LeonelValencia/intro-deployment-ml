@@ -1,5 +1,8 @@
 name: Testing API
 on: [push, pull_request]
+permissions:
+  id-token:write# need this for OIDC  
+  contents:read
 jobs:
   testing-api:
     runs-on: ubuntu-latest

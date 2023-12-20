@@ -1,5 +1,12 @@
 name: Testing API
-on: [push, pull_request]
+on:
+  workflow_dispatch:
+    push:
+      branches:
+        - workflow_testing_api
+    pull_request:
+      branches:
+        - workflow_testing_api
 jobs:
   testing-api:
     runs-on: ubuntu-latest

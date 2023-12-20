@@ -1,8 +1,5 @@
 name: Continous training
 on:
-  push:
-    branches:
-      - workflow_continous_training
   schedule:
     - cron: "0 */9 * * *"
   workflow_dispatch:

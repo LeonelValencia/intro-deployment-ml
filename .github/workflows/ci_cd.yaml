@@ -12,7 +12,7 @@ jobs:
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v3
-      - nama: Set environment and bring the model
+      - name: Set environment and bring the model
         run: |
           pip3 install virtualenv
           virtualenv venv

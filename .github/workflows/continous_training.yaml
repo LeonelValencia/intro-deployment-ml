@@ -1,7 +1,7 @@
 name: Continous training
 on:
   branch:
-    - main
+    - workflow_continous_training
   # schedule:
   #   - cron: "0 */9 * * *"
   workflow_dispatch:
